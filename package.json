@@ -1,0 +1,6 @@
+{
+	"scripts": {
+		"test": "deno test ./tests",
+		"run": "deno run markdown.js --allow-read --source ./example/schema_definition.json --out ./md "
+	}
+}
