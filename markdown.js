@@ -1,4 +1,6 @@
 import { isAbsolute, join } from "https://deno.land/std@0.148.0/path/mod.ts";
+import {SchemaDefManager} from "./src/schema-def-manager.js";
+import {MarkdownFactory} from "./src/markdown-factory.js";
 
 const details = {
     "source": "",
@@ -18,11 +20,16 @@ async function loadSchema() {
         details.source = join(Deno.cwd(), details.source);
     }
 
+    details.out = join(Deno.cwd(), details.out);
+
     const json = JSON.parse(await Deno.readTextFile(details.source));
-    console.log(json);
+    const manager = new SchemaDefManager(json);
+    return manager;
 }
 
 await initialize();
-await loadSchema();
+const manager = await loadSchema();
+const markdown = new MarkdownFactory(manager, details.out);
 
+markdown.generate();
 console.log(details);

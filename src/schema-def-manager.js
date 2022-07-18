@@ -3,8 +3,15 @@ export class SchemaDefManager {
         this._schemaDef = schemaDef;
     }
 
-
     getTemplate(template) {
+        if (template == "none") {
+            return {};
+        }
+
+        if (template == null) {
+            return null;
+        }
+
         let obj;
 
         if (typeof template == "object") {
@@ -12,7 +19,7 @@ export class SchemaDefManager {
         }
         else {
             const property = template.replace("tpl:", "");
-            obj = this._schemaDef.templates?.[property];
+            obj = Object.assign({}, this._schemaDef.templates[property]);
         }
 
         const keys = Object.keys(obj);
@@ -30,8 +37,16 @@ export class SchemaDefManager {
         return Object.keys(this._schemaDef.types);
     }
 
+    getType(name) {
+        return Object.assign({}, this._schemaDef.types[name]);
+    }
+
     getActions(type) {
         return Object.keys(type.actions);
+    }
+
+    getAction(type, action) {
+        return Object.assign({}, type.actions[action]);
     }
 
     getArgs(action) {
