@@ -1,4 +1,5 @@
-# performPerform a action
+# perform  
+Perform a action
 ## Actions
 
 **0. navigate** - using the browser url, navigate to a page

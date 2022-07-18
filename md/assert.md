@@ -1,4 +1,5 @@
-# assertCheck if a value, attribute or property equals expected values
+# assert  
+Check if a value, attribute or property equals expected values
 ## Actions
 
 **0. attributes** - validate multiple attributes checking that their values are as expected

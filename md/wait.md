@@ -1,4 +1,5 @@
-# waitWait for a expected element, attribute, property or value. Fail if value does not appear before timeout
+# wait  
+Wait for a expected element, attribute, property or value. Fail if value does not appear before timeout
 ## Actions
 
 **0. time** - wait for a given amount of time

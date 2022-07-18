@@ -13,7 +13,8 @@ export class MarkdownFactory {
             const lines = [];
             const typeObj = this._schemaManager.getType(type);
 
-            lines.push(`# ${type}`);
+            lines.push(`# ${type}  `);
+            lines.push("\n")
             lines.push(typeObj.description);
             lines.push("\n");
 
