@@ -4,10 +4,6 @@
   "templates": {
       "args": {
         "id": "tpl:id",
-        "query": "tpl:query"
-      },
-      "args_timeout": {
-        "id": "tpl:id",
         "query": "tpl:query",
         "timeout": "tpl:timeout"
       },
@@ -289,22 +285,22 @@
         },
         "is_ready": {
           "description": "wait until the defined element's dataset has a ready property set to true",
-          "tpl:args_timeout": {}
+          "tpl:args": {}
         },
         "element": {
           "description": "wait until element exists and is visible",
-          "tpl:args_timeout": {}
+          "tpl:args": {}
         },
         "attribute": {
           "description": "wait for attribute to have a particular value",
-          "tpl:args_timeout": {
+          "tpl:args": {
             "attr": "tpl:attr",
             "value": "tpl:value"
           }
         },
         "attributes": {
           "description": "wait for multiple attributes to have their defined values",
-          "tpl:args_timeout": {
+          "tpl:args": {
             "attributes": {
               "description": "dictionary of attributes and values to check.",
               "required": true
@@ -313,14 +309,14 @@
         },
         "style_property": {
           "description": "wait for element's style to have the defined property value",
-          "tpl:args_timeout": {
+          "tpl:args": {
             "property": "tpl:property",
             "value": "tpl:value"
           }
         },
         "element_properties": {
           "description": "wait for element's style properties to be set to defined values",
-          "tpl:args_timeout": {
+          "tpl:args": {
             "properties": {
               "description": "dictionary of property names and values to check",
               "required": true
@@ -329,49 +325,49 @@
         },
         "text_content": {
           "description": "wait until element's text content equals defined text",
-          "tpl:args_timeout": {
+          "tpl:args": {
             "value": "tpl:value"
           }
         },
         "text_value": {
           "description": "wait until element's value property equals defined value",
-          "tpl:args_timeout": {
+          "tpl:args": {
             "value": "tpl:value"
           }
         },
         "selected": {
           "description": "wait for checkbox or radio buttons to be selected",
-          "tpl:args_timeout": {}
+          "tpl:args": {}
         },
         "child_count": {
           "description": "wait until defined element has a defined number of children",
-          "tpl:args_timeout": {
+          "tpl:args": {
             "count": "tpl:count"
           }
         },
         "element_count": {
           "description": "wait until queried elements equal defined count",
-          "tpl:args_timeout": {
+          "tpl:args": {
             "count": "tpl:count"
           }
         },
         "window_count": {
           "description": "wait until window count equals defined",
-          "tpl:args_timeout": {
+          "tpl:args": {
             "count": "tpl:count"
           }
         },
         "idle": {
           "description": "wait for cpu idel",
-          "tpl:args_timeout": {}
+          "tpl:args": {}
         },
         "has_attribute": {
           "description": "wait until a element has the defined attribute",
-          "tpl:args_timeout": {}
+          "tpl:args": {}
         },
         "has_not_attribute": {
           "description": "wait until the defined attribute is no longer on element",
-          "tpl:args_timeout": {}
+          "tpl:args": {}
         }
       }
     }

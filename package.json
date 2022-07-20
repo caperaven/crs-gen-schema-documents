@@ -1,6 +1,7 @@
 {
 	"scripts": {
 		"test": "deno test ./tests",
-		"run": "deno run --allow-read --allow-write markdown.js --source ./example/schema_definition.json --out ./md"
+		"run": "deno run --allow-read --allow-write markdown.js --source ./example/schema_definition.json --out ./md",
+		"validate": "deno run --allow-read --allow-write validate.js --def ./example/schema_definition.json --schema ./example/test.json"
 	}
 }
